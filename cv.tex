@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=0cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{ {./images/} }
+
+\oddsidemargin=-1in
+\topmargin=-1in
+\headheight=0pt
+\headsep=0pt
+\parindent=0pt
+
+
+\title{\bfseries\Huge Oskar Boer}
+\author{CS student}
+\date{}
+
+
+\newenvironment{leftbox}[1]
+ {\itemize[
+    nosep,
+    leftmargin=0pt,
+    rightmargin=\dimexpr\textwidth-#1\relax,
+    itemindent=\parindent,
+    listparindent=\parindent,
+  ]\item[]\relax}
+ {\enditemize}
+
+\newenvironment{rightbox}[1]
+ {\itemize[
+    nosep,
+    leftmargin=\dimexpr\textwidth-#1\relax,
+    rightmargin=0pt,
+    itemindent=\parindent,
+    listparindent=\parindent,
+  ]\item[]\relax}
+ {\enditemize}
+
+\begin{document}
+    \fcolorbox{lightgray}{lightgray}{
+	\begin{minipage}{\dimexpr0.3\textwidth-2\fboxrule-2\fboxsep\relax}
+		\flushleft{\includegraphics[scale=0.15]{snow.png}}\\
+        Contacts\\
+        +7 931 303-38-53
+	\end{minipage}
+    %
+    }
+ 	\begin{minipage}{\dimexpr0.65\textwidth-2\fboxrule-2\fboxsep\relax}
+		\begingroup
+		\let\center\flushright
+		\let\endcenter\endflushright
+		\maketitle
+		\endgroup
+	\end{minipage}
+    \end{document}
